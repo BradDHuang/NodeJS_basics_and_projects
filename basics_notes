@@ -1,0 +1,23 @@
+
+Node.js: 
+a JavaScript runtime 
+built on Chrome's V8 JavaScript engine. 
+// ******
+// V8 compiles JavaScript directly to native machine code before executing it.
+// V8 Written in: C++, JavaScript
+// ******
+
+Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
+
+Node.js' package ecosystem:
+npm (node package manager), 
+is the largest ecosystem of open source libraries in the world.
+
+
+
+
+
+
+
+
+

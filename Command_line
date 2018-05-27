@@ -1,0 +1,23 @@
+
+e.g.
+
+node -v // version
+v10.2.1
+
+node
+> console.log("hello world");
+hello world
+undefined
+
+> global // vs. window 
+
+> process // vs. doucment
+
+> process.exit(0);
+
+
+
+
+
+
+
