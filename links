@@ -16,8 +16,10 @@ fs.appendFile(path, data[, options], callback)
 // path <string> | <Buffer> | <URL> | <number> filename or file descriptor
 // data <string> | <Buffer>
 
+The os module provides a number of operating system-related utility methods. It can be accessed using:
+const os = require('os');
 
-
+The os.userInfo() method returns information about the currently effective user.
 
 
 
