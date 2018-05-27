@@ -16,6 +16,11 @@ undefined
 
 > process.exit(0);
 
+cd sample/
+
+node app.js // run the code
+
+
 
 
 

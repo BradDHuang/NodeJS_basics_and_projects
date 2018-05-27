@@ -1,0 +1,26 @@
+
+// related links:
+
+https://nodejs.org/api/
+https://nodejs.org/api/fs.html#fs_file_system
+
+The fs module 
+provides an API 
+for interacting with the file system 
+in a manner closely modeled around standard POSIX (The Portable Operating System Interface) functions.
+
+To use this module:
+const fs = require('fs');
+
+fs.appendFile(path, data[, options], callback)
+// path <string> | <Buffer> | <URL> | <number> filename or file descriptor
+// data <string> | <Buffer>
+
+
+
+
+
+
+
+
+
