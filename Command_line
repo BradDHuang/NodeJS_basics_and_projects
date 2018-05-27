@@ -3,6 +3,7 @@ e.g.
 
 node -v // version
 v10.2.1
+// for c9, $ nvm install 10.2.1
 
 node
 > console.log("hello world");
