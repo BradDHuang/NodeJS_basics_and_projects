@@ -1,7 +1,7 @@
 console.log("starting app.js");
 
 const fs = require('fs'); // the file system
-const os = require('os');
+// const os = require('os');
 const notes = require('./notes.js');
 
 // var _ = require('lodash');
@@ -12,8 +12,10 @@ console.log(_.isString("str")); // true
 */
 // Creates a duplicate-free version of an array:
 // _.uniq(array)
-var dupFreeArr = _.uniq(["brad", 1, "brad", 1, 2, 3]);
-console.log(dupFreeArr); // [ 'brad', 1, 2, 3 ]
+// var dupFreeArr = _.uniq(["brad", 1, "brad", 1, 2, 3]);
+// console.log(dupFreeArr); // [ 'brad', 1, 2, 3 ]
+// var dupFreeArr = _.uniq(["brad"]);
+// console.log(dupFreeArr);
 
 /*
 // Create a file(if not already exists) & append the content to it:

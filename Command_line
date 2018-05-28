@@ -29,8 +29,9 @@ npm init // then use 3rd party modules.
 
 npm i --save lodash // A modern JavaScript utility library delivering modularity, performance & extras.
 
-
-
+npm install -g nodemon
+And nodemon will be installed globally to your system path.
+nodemon [your node app] // e.g. nodemon app.js
 
 
 

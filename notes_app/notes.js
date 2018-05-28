@@ -16,11 +16,11 @@ module.exports.addNote = () => { // Arrow func.
 // console.log(module.exports); 
 // ******
 */
-
+/*
 module.exports.add = (a, b) => {
     return a + b;
 };
-
+*/
 
 
 
