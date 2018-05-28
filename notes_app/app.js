@@ -45,6 +45,25 @@ var sum = notes.add(3, 2); // 5;
 console.log(sum);
 */
 
+console.log(process.argv);
+var command = process.argv[2];
+console.log("Command:", command);
+
+if (command === "add") {
+    console.log("add notes");
+} 
+else if (command === "list") {
+    console.log("list notes");
+} 
+else if (command === "read") {
+    console.log("read notes");
+} 
+else if (command === "remove") {
+    console.log("remove notes");
+} 
+else {
+    console.log("Command not recognized");
+}
 
 
 
