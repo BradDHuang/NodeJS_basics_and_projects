@@ -33,6 +33,13 @@ is the largest ecosystem of open source libraries in the world.
 
 use "Ctrl + f" // find
 
+argv: 
+stands for "argument vector". 
+A vector is a one-dimensional array, 
+and argv is a one-dimensional array of strings.
+
+
+
 
 
 
