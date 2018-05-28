@@ -4,6 +4,10 @@ e.g.
 node -v // version
 v10.2.1
 // for c9, $ nvm install 10.2.1
+// by default, it is v6.11.2
+npm -v
+5.8.0
+// for c9, 3.10.10
 
 node
 > console.log("hello world");
@@ -20,6 +24,10 @@ cd sample/
 
 node app.js // run the code
 
+
+npm init // then use 3rd party modules.
+
+npm i --save lodash // A modern JavaScript utility library delivering modularity, performance & extras.
 
 
 

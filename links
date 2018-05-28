@@ -21,6 +21,8 @@ const os = require('os');
 
 The os.userInfo() method returns information about the currently effective user.
 
+https://lodash.com/docs/4.17.10
+
 
 
 
