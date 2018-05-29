@@ -6,6 +6,7 @@ const notes = require('./notes.js');
 
 // var _ = require('lodash');
 const _ = require('lodash');
+const yargs = require('yargs');
 /*
 console.log(_.isString(true)); // false
 console.log(_.isString("str")); // true
@@ -45,21 +46,29 @@ var sum = notes.add(3, 2); // 5;
 console.log(sum);
 */
 
-console.log(process.argv);
-var command = process.argv[2];
+const argv = yargs.argv;
+console.log("Yargs", argv);
+
+console.log("Process", process.argv);
+// var command = process.argv[2];
+var command = argv._[0]; // yargs
 console.log("Command:", command);
 
 if (command === "add") {
-    console.log("add notes");
+    // console.log("add notes");
+    notes.addNote(argv.title, argv.body);
 } 
 else if (command === "list") {
-    console.log("list notes");
+    // console.log("list notes");
+    notes.getAll();
 } 
 else if (command === "read") {
-    console.log("read notes");
+    // console.log("read notes");
+    notes.getNote(argv.title);
 } 
 else if (command === "remove") {
-    console.log("remove notes");
+    // console.log("remove notes");
+    notes.deleteNote(argv.title);
 } 
 else {
     console.log("Command not recognized");

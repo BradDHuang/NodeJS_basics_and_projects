@@ -22,6 +22,27 @@ module.exports.add = (a, b) => {
 };
 */
 
+var addNote = (title, body) => {
+    console.log("adding note", title, body);
+};
+var getAll = () => {
+    console.log("listing all notes");
+};
+var getNote = (title) => {
+    console.log("getting note with title: " + title);
+};
+var deleteNote = (title) => {
+    console.log("removing note with title: " + title);
+};
+
+module.exports = {
+    // addNote: addNote
+    addNote, // ES6
+    getAll,
+    getNote,
+    deleteNote
+}
+
 
 
 

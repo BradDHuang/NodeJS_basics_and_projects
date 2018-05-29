@@ -34,7 +34,11 @@ And nodemon will be installed globally to your system path.
 nodemon [your node app] // e.g. nodemon app.js
 
 node app.js list
-node app.js remove --title="secrets 2" // 2 items
-node app.js remove --title "secrets 2" // 3 items
+node app.js remove --title="secrets 2" 
+node app.js remove --title "secrets 2" 
+node app.js remove --title secrets 2 // title: 'secrets' // no spaces!
+// using yargs to get key-value pair, e.g. title: 'secrets 2'
+
+npm i yargs --save
 
 
