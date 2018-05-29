@@ -49,7 +49,7 @@ console.log(sum);
 const argv = yargs.argv;
 console.log("Yargs", argv);
 
-console.log("Process", process.argv);
+// console.log("Process", process.argv);
 // var command = process.argv[2];
 var command = argv._[0]; // yargs
 console.log("Command:", command);

@@ -22,8 +22,34 @@ module.exports.add = (a, b) => {
 };
 */
 
+const fs = require('fs'); // the file system
+
 var addNote = (title, body) => {
-    console.log("adding note", title, body);
+    // console.log("adding note", title, body);
+    var notes = [];
+    var note = {
+        title,
+        body
+    };
+    
+    try {
+        var notesStr = fs.readFileSync("notes_data.json");
+        notes = JSON.parse(notesStr);
+    } catch (e) {
+        
+    }
+    
+    // Loop
+    // var duplicateNotes = notes.filter((note) => {
+    //     return note.title === title;
+    // });
+    var duplicateNotes = notes.filter((note) => note.title === title); // ES6
+    if (duplicateNotes.length === 0) {
+        notes.push(note);
+    
+        fs.writeFileSync("notes_data.json", JSON.stringify(notes));
+    }
+    // else, do nothing.
 };
 var getAll = () => {
     console.log("listing all notes");
