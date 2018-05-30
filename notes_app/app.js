@@ -78,7 +78,10 @@ else if (command === "read") {
 } 
 else if (command === "remove") {
     // console.log("remove notes");
-    notes.deleteNote(argv.title);
+    // notes.deleteNote(argv.title);
+    var noteDeleted = notes.deleteNote(argv.title);
+    var msg = noteDeleted ? "Note was deleted." : "Note not found!";
+    console.log(msg);
 } 
 else {
     console.log("Command not recognized");
