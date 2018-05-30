@@ -24,21 +24,29 @@ module.exports.add = (a, b) => {
 
 const fs = require('fs'); // the file system
 
+// Refactoring with func.s
+var fetchNotes = () => {
+    try {
+        var notesStr = fs.readFileSync("notes_data.json");
+        // notes = JSON.parse(notesStr);
+        return JSON.parse(notesStr);
+    } catch (e) {
+        return [];
+    }
+};
+var saveNotes = (notes) => {
+    fs.writeFileSync("notes_data.json", JSON.stringify(notes));
+};
+
 var addNote = (title, body) => {
     // console.log("adding note", title, body);
-    var notes = [];
+    // var notes = [];
+    var notes = fetchNotes();
     var note = {
         title,
         body
     };
-    
-    try {
-        var notesStr = fs.readFileSync("notes_data.json");
-        notes = JSON.parse(notesStr);
-    } catch (e) {
-        
-    }
-    
+
     // Loop
     // var duplicateNotes = notes.filter((note) => {
     //     return note.title === title;
@@ -47,9 +55,11 @@ var addNote = (title, body) => {
     if (duplicateNotes.length === 0) {
         notes.push(note);
     
-        fs.writeFileSync("notes_data.json", JSON.stringify(notes));
+        saveNotes(notes);
+        
+        return note;
     }
-    // else, do nothing.
+    // else, do nothing. // undefined will get returned.
 };
 var getAll = () => {
     console.log("listing all notes");

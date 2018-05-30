@@ -56,7 +56,17 @@ console.log("Command:", command);
 
 if (command === "add") {
     // console.log("add notes");
-    notes.addNote(argv.title, argv.body);
+    // notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
+
+    if (note) {
+        console.log("Note created.");
+        console.log("--");
+        console.log(`title: ${note.title}`);
+        console.log(`body: ${note.body}`);
+    } else {
+        console.log("Note title taken!");
+    }
 } 
 else if (command === "list") {
     // console.log("list notes");
