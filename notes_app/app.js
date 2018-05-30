@@ -61,9 +61,11 @@ if (command === "add") {
 
     if (note) {
         console.log("Note created.");
-        console.log("--");
-        console.log(`title: ${note.title}`);
-        console.log(`body: ${note.body}`);
+        // console.log("--");
+        // console.log(`title: ${note.title}`);
+        // console.log(`body: ${note.body}`);
+        // DRY
+        notes.logNote(note);
     } else {
         console.log("Note title taken!");
     }
@@ -74,7 +76,14 @@ else if (command === "list") {
 } 
 else if (command === "read") {
     // console.log("read notes");
-    notes.getNote(argv.title);
+    // notes.getNote(argv.title);
+    var noteFound = notes.getNote(argv.title);
+    if (noteFound) {
+        console.log("Note found.");
+        notes.logNote(noteFound);
+    } else {
+        console.log("No such note!");
+    }
 } 
 else if (command === "remove") {
     // console.log("remove notes");

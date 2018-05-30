@@ -65,7 +65,14 @@ var getAll = () => {
     console.log("listing all notes");
 };
 var getNote = (title) => {
-    console.log("getting note with title: " + title);
+    // console.log("getting note with title: " + title);
+    var notes = fetchNotes();
+    var noteFound = notes.filter((note) => note.title === title); 
+    // if (noteFound) {
+    return noteFound[0];
+    // } else {
+        // return;
+    // }
 };
 var deleteNote = (title) => {
     // console.log("removing note with title: " + title);
@@ -77,13 +84,20 @@ var deleteNote = (title) => {
     return notes.length !== filteredNotes.length;
 };
 
+var logNote = (note) => {
+    console.log("--");
+    console.log(`title: ${note.title}`);
+    console.log(`body: ${note.body}`);
+};
+
 module.exports = {
     // addNote: addNote
     addNote, // ES6
     getAll,
     getNote,
-    deleteNote
-}
+    deleteNote,
+    logNote
+};
 
 
 
