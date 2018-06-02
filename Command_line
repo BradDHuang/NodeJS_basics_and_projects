@@ -11,6 +11,7 @@ v10.2.1
     debug> n (n stands for "next")
     debug> c (c stands for "continue")
     debug> repl
+    // repl: Read–Eval–Print Loop
 */
 
 npm -v
