@@ -5,6 +5,14 @@ node -v // version
 v10.2.1
 // for c9, $ nvm install 10.2.1
 // by default, it is v6.11.2
+// debug: e.g. $ node inspect playground/debug.js
+/*
+    debug> list(# of lines + 1, to wrap your code)
+    debug> n (n stands for "next")
+    debug> c (c stands for "continue")
+    debug> repl
+*/
+
 npm -v
 5.8.0
 // for c9, 3.10.10
