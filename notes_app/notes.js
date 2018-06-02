@@ -85,6 +85,9 @@ var deleteNote = (title) => {
 };
 
 var logNote = (note) => {
+    
+    debugger;
+    
     console.log("--");
     console.log(`title: ${note.title}`);
     console.log(`body: ${note.body}`);
