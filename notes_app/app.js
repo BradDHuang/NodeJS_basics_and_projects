@@ -46,7 +46,33 @@ var sum = notes.add(3, 2); // 5;
 console.log(sum);
 */
 
-const argv = yargs.argv;
+// const argv = yargs.argv;
+const aNote = {
+    title: {
+        describle: "Title of note",
+        demand: true,
+        alias: "t" // -t vs. --title
+    },
+    body: {
+        describle: "Body of note",
+        demand: true,
+        alias: "b" // -b vs. --body
+    }
+};
+const argv = yargs
+    .command("add", "Add a new note", {
+        title: aNote.title,
+        body: aNote.body
+    })
+    .command("list", "List all notes")
+    .command("read", "Read a note", {
+        title: aNote.title
+    })
+    .command("remove", "Remove a note", {
+        title: aNote.title
+    })
+    .help()
+    .argv;
 // console.log("Yargs", argv);
 
 // console.log("Process", process.argv);

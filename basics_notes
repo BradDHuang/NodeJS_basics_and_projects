@@ -43,6 +43,10 @@ helps you build interactive command line tools,
 by parsing arguments and generating an elegant user interface.
 
 
+debugging via Chrome dev tools:
+chrome://inspect
+
+
 
 
 
