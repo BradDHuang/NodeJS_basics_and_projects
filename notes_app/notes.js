@@ -1,4 +1,4 @@
-console.log("starting notes.js");
+// console.log("starting notes.js");
 
 // module
 // console.log(module); // Module {...}
@@ -62,7 +62,8 @@ var addNote = (title, body) => {
     // else, do nothing. // undefined will get returned.
 };
 var getAll = () => {
-    console.log("listing all notes");
+    // console.log("listing all notes");
+    return fetchNotes();
 };
 var getNote = (title) => {
     // console.log("getting note with title: " + title);

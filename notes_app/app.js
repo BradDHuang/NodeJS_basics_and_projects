@@ -1,4 +1,4 @@
-console.log("starting app.js");
+// console.log("starting app.js");
 
 const fs = require('fs'); // the file system
 // const os = require('os');
@@ -47,12 +47,12 @@ console.log(sum);
 */
 
 const argv = yargs.argv;
-console.log("Yargs", argv);
+// console.log("Yargs", argv);
 
 // console.log("Process", process.argv);
 // var command = process.argv[2];
 var command = argv._[0]; // yargs
-console.log("Command:", command);
+// console.log("Command:", command);
 
 if (command === "add") {
     // console.log("add notes");
@@ -72,7 +72,13 @@ if (command === "add") {
 } 
 else if (command === "list") {
     // console.log("list notes");
-    notes.getAll();
+    // notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} note(s).`);
+    // allNotes.forEach((note) => {
+    //     notes.logNote(note);
+    // });
+    allNotes.forEach((note) => notes.logNote(note));
 } 
 else if (command === "read") {
     // console.log("read notes");
