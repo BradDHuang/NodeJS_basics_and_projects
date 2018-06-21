@@ -20,3 +20,13 @@ Callback log with 0ms...
 Callback log...
 */
 
+// Reason:
+// Call Stack
+// Node APIs
+// Callback Queue
+// Event Loop
+
+// => setTimeout() should wait until Call-Stack is empty.
+// That's why "Finishing the app..." is printed before "Callback log with 0ms...".
+
+
