@@ -51,3 +51,13 @@ node app.js remove --title secrets 2 // title: 'secrets' // no spaces!
 npm i yargs --save
 
 
+For weather_app:
+npm init
+npm i request@2.87.0 --save 
+node app.js
+
+
+
+
+
+

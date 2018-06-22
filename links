@@ -24,6 +24,20 @@ The os.userInfo() method returns information about the currently effective user.
 https://lodash.com/docs/4.17.10
 
 
+https://maps.googleapis.com/maps/api/geocode/json
+Note: 
+{
+error_message: "Invalid request. Missing the 'address', 'components', 'latlng' or 'place_id' parameter.",
+results: [ ],
+status: "INVALID_REQUEST"
+}
+e.g. https://maps.googleapis.com/maps/api/geocode/json?address=503%20southwest%20pkwy
+
+https://www.npmjs.com/package/request
+
+
+
+
 
 
 
