@@ -2,6 +2,24 @@
 
 const request = require("request");
 
+const yargs = require("yargs");
+const argv = yargs
+    .options({
+        a: {
+            demand: true,
+            alias: "address",
+            describe: "Address to fetch weather for.",
+            string: true
+        }
+    })
+    .help()
+    .alias("help", 'h')
+    .argv;
+// console.log(argv);
+// console.log(argv.a);
+// console.log(encodeURIComponent(argv.a));
+var inputAddress = encodeURIComponent(argv.a);
+
 /*
 var request = require('request');
 request('http://www.google.com', function (error, response, body) {
@@ -12,7 +30,8 @@ request('http://www.google.com', function (error, response, body) {
 */
 
 request({
-    url: "https://maps.googleapis.com/maps/api/geocode/json?address=503%20southwest%20pkwy",
+    // url: "https://maps.googleapis.com/maps/api/geocode/json?address=503%20southwest%20pkwy",
+    url: `https://maps.googleapis.com/maps/api/geocode/json?address=${inputAddress}`,
     json: true
 }, (error, response, body) => {
     // console.log(body);

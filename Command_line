@@ -55,6 +55,24 @@ For weather_app:
 npm init
 npm i request@2.87.0 --save 
 node app.js
+npm i yargs@11.0.0 --save
+node app.js --help
+node app.js -h  // alias
+node app.js -a "503 southwest pkwy"
+
+$ node
+> encodeURIComponent("2301 eastmark dr tx")
+'2301%20eastmark%20dr%20tx'
+> decodeURIComponent("brad%20pitt")
+'brad pitt'
+
+$ node app.js -a "whitehouse tx"                                             
+Address: Whitehouse, TX 75791, USA
+Latitude/lat: 32.2268212
+Longitude/lng: -95.2255041
+
+
+
 
 
 
