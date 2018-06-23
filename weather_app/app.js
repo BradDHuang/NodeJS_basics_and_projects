@@ -34,6 +34,15 @@ request({
     url: `https://maps.googleapis.com/maps/api/geocode/json?address=${inputAddress}`,
     json: true
 }, (error, response, body) => {
+    
+    // before print out info. we need to check for callback Errors first.
+    if (error) {
+        console.log("Error: unable to connect to Google servers.");
+    } else if (body.status === "ZERO_RESULTS") { 
+    // { results: [ ], status: "ZERO_RESULTS" } 
+        console.log("Error: invalid address input.");
+    } else if (body.status === "OK") {
+    
     // console.log(body);
     // console.log(JSON.stringify(body, undefined, 4)); // convert the body Objects into Strings.
     // the body here is some JSON information (data).
@@ -42,10 +51,12 @@ request({
     // response also contains info. about request.
     // console.log(JSON.stringify(error, undefined, 4)); // null, when there is no error.
     // console.log(body.results[0].formatted_address);
-    console.log(`Address: ${body.results[0].formatted_address}`);
-    // console.log(body.results[0].geometry.location);
-    console.log(`Latitude/lat: ${body.results[0].geometry.location.lat}`);
-    console.log(`Longitude/lng: ${body.results[0].geometry.location.lng}`);
+        console.log(`Address: ${body.results[0].formatted_address}`);
+        // console.log(body.results[0].geometry.location);
+        console.log(`Latitude/lat: ${body.results[0].geometry.location.lat}`);
+        console.log(`Longitude/lng: ${body.results[0].geometry.location.lng}`);
+    
+    }
 });
 
 
