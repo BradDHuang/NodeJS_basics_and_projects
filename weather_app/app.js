@@ -3,7 +3,7 @@
 // const request = require("request");
 
 const geocode = require("./geocode/geocode");
-
+/*
 const yargs = require("yargs");
 const argv = yargs
     .options({
@@ -30,6 +30,9 @@ geocode.geocodeAddress(argv.a, (err, res) => {
         console.log(JSON.stringify(res, undefined, 4)); // convert the res Objects into Strings.
     }
 });
+*/
+
+geocode.getWeatherTemp();
 
 /*
 var request = require('request');
@@ -71,6 +74,16 @@ request({
 });
 
 */
+
+
+// Weather API Key: 85292f37ecd8788d8a23251465fd4a43
+/*
+API Request Types
+Forecast Request
+      https://api.darksky.net/forecast/[key]/[latitude],[longitude]
+*/
+// eg https://api.darksky.net/forecast/85292f37ecd8788d8a23251465fd4a43/37.2374847,-121.8277925
+      
 
 
 
