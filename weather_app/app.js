@@ -22,7 +22,14 @@ const argv = yargs
 // console.log(encodeURIComponent(argv.a));
 // var inputAddress = encodeURIComponent(argv.a);
 
-geocode.geocodeAddress(argv.a);
+// geocode.geocodeAddress(argv.a);
+geocode.geocodeAddress(argv.a, (err, res) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(JSON.stringify(res, undefined, 4)); // convert the res Objects into Strings.
+    }
+});
 
 /*
 var request = require('request');
