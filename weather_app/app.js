@@ -1,6 +1,8 @@
 
 
-const request = require("request");
+// const request = require("request");
+
+const geocode = require("./geocode/geocode");
 
 const yargs = require("yargs");
 const argv = yargs
@@ -18,7 +20,9 @@ const argv = yargs
 // console.log(argv);
 // console.log(argv.a);
 // console.log(encodeURIComponent(argv.a));
-var inputAddress = encodeURIComponent(argv.a);
+// var inputAddress = encodeURIComponent(argv.a);
+
+geocode.geocodeAddress(argv.a);
 
 /*
 var request = require('request');
@@ -28,7 +32,7 @@ request('http://www.google.com', function (error, response, body) {
   console.log('body:', body); // Print the HTML for the Google homepage.
 });
 */
-
+/*
 request({
     // url: "https://maps.googleapis.com/maps/api/geocode/json?address=503%20southwest%20pkwy",
     url: `https://maps.googleapis.com/maps/api/geocode/json?address=${inputAddress}`,
@@ -59,7 +63,7 @@ request({
     }
 });
 
-
+*/
 
 
 
