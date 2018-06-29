@@ -3,7 +3,8 @@
 // const request = require("request");
 
 const geocode = require("./geocode/geocode");
-/*
+const weather = require("./getWeather/getWeather");
+
 const yargs = require("yargs");
 const argv = yargs
     .options({
@@ -21,7 +22,7 @@ const argv = yargs
 // console.log(argv.a);
 // console.log(encodeURIComponent(argv.a));
 // var inputAddress = encodeURIComponent(argv.a);
-
+/*
 // geocode.geocodeAddress(argv.a);
 geocode.geocodeAddress(argv.a, (err, res) => {
     if (err) {
@@ -32,8 +33,14 @@ geocode.geocodeAddress(argv.a, (err, res) => {
 });
 */
 
-geocode.getWeatherTemp();
-
+// geocode.getWeatherTemp();
+weather.getWeatherTemp(37.2374847, -121.8277925, (err, res) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(JSON.stringify(res, undefined, 4));
+    }
+});
 /*
 var request = require('request');
 request('http://www.google.com', function (error, response, body) {
