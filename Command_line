@@ -76,9 +76,13 @@ Address: College Station, TX 77840, USA
 Latitude/lat: 30.616559
 Longitude/lng: -96.31197429999999
 
+$ node app.js -a 77840
+$ node app.js -a houston
+$ node app.js -a whitehouse
 
-
-
+$ node app.js -a "whitehouse tx"
+Whitehouse, TX 75791, USA
+Currently the temp is 80.63 and it feels like it's 85.39.
 
 
 

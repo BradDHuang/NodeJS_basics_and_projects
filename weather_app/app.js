@@ -22,17 +22,27 @@ const argv = yargs
 // console.log(argv.a);
 // console.log(encodeURIComponent(argv.a));
 // var inputAddress = encodeURIComponent(argv.a);
-/*
+
 // geocode.geocodeAddress(argv.a);
 geocode.geocodeAddress(argv.a, (err, res) => {
     if (err) {
         console.log(err);
     } else {
-        console.log(JSON.stringify(res, undefined, 4)); // convert the res Objects into Strings.
+        // console.log(JSON.stringify(res, undefined, 4)); // convert the res Objects into Strings.
+        console.log(res.address);
+        // weather.getWeatherTemp(37.2374847, -121.8277925, (err, res) => {
+        weather.getWeatherTemp(res.latitude, res.longitude, (err, weatherRes) => {
+            if (err) {
+                console.log(err);
+            } else {
+                // console.log(JSON.stringify(weatherRes, undefined, 4));
+                console.log(`Currently the temp is ${weatherRes.currentTemperature} and it feels like it's ${weatherRes.apparentTemperature}.`);
+            }
+        });
     }
 });
-*/
 
+/*
 // geocode.getWeatherTemp();
 weather.getWeatherTemp(37.2374847, -121.8277925, (err, res) => {
     if (err) {
@@ -41,6 +51,7 @@ weather.getWeatherTemp(37.2374847, -121.8277925, (err, res) => {
         console.log(JSON.stringify(res, undefined, 4));
     }
 });
+*/
 /*
 var request = require('request');
 request('http://www.google.com', function (error, response, body) {
