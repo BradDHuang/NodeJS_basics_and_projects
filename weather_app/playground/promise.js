@@ -13,12 +13,38 @@ var asyncAdd = (a, b) => {
     });
 };
 
-asyncAdd(5, 6).then((res) => {
+// asyncAdd(5, 6).then((res) => {
+/*
+asyncAdd(5, '6').then((res) => {
+    // Args must be numbers.
+    // Result: undefined
+    
     console.log("Result: " + res);
+    
+    // Chaining Promises:
+    return asyncAdd(res, 11);
+    
 }, (err) => {
     console.log(err);
+// });
+}).then((total) => {
+    console.log("Result: " + total);
+}, (e) => {
+    console.log(e);
 });
+*/
 
+// Use of catch(), catch for all the errors.
+asyncAdd(5, '6').then((res) => { // Args must be numbers.
+    console.log("Result: " + res);
+    // Chaining Promises:
+    return asyncAdd(res, 11);
+    
+}).then((total) => {
+    console.log("Result: " + total);
+}).catch((err) => {
+    console.log(err);
+});
 
 /*
 var aPromise = new Promise((resolve, reject) => {
