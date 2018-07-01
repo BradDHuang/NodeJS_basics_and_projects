@@ -8,6 +8,8 @@ npm i express@4.16.3 --save
 node server.js
 nodemon server.js // optional
 
+npm i hbs@4.0.1 --save
+
 
 
 

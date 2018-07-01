@@ -5,6 +5,14 @@ http://expressjs.com
 // Fast, unopinionated, minimalist web framework for Node.js
 
 
+http://handlebarsjs.com
+// Handlebars provides the power necessary to let you 
+// build semantic templates effectively with no frustration.
+
+https://www.npmjs.com/package/hbs
+// Express.js view engine for handlebars.js
+
+
 
 
 
