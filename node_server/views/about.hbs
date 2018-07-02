@@ -7,12 +7,15 @@
         </title>
     </head>
     <body>
-        <h1>{{pageTitle}}<h1>
+        {{!--<h1>{{pageTitle}}<h1>--}}
+        {{> header}}
         <p>About...</p>
         
-        <footer>
-            <p>@Copyright {{currentYear}}</p>
-        </footer>
+        {{!--<footer>--}}
+        {{!--    <p>@Copyright {{currentYear}}</p>--}}
+        {{!--</footer>--}}
+        {{> footer}}
+        
     </body>
 </html>
 

@@ -7,11 +7,15 @@
         </title>
     </head>
     <body>
-        <h1>{{pageTitle}}<h1>
-        <p>Greetings...</p>
+        {{!--<h1>{{pageTitle}}<h1>--}}
+        {{> header}}
+        {{!--<p>Greetings...</p>--}}
+        <p>{{capitalize msg}}</p>
         
-        <footer>
-            <p>@Date {{currentDate}}</p>
-        </footer>
+        {{!--<footer>--}}
+        {{!--    <p>@Date {{currentDate}}</p>--}}
+        {{!--</footer>--}}
+        {{> footer}}
+        
     </body>
 </html>

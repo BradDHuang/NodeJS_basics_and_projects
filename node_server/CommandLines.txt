@@ -11,6 +11,9 @@ nodemon server.js // optional
 npm i hbs@4.0.1 --save
 
 
+nodemon server.js -e js,hbs
+
+
 
 
 

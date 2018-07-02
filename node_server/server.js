@@ -6,6 +6,15 @@ const hbs = require("hbs");
 
 var app = express();
 
+hbs.registerPartials(__dirname + "/views/partials");
+hbs.registerHelper("getCurrentYear", () => {
+    // return "test.";
+    return new Date().getFullYear();
+});
+hbs.registerHelper("capitalize", (text) => {
+    return text.toUpperCase();
+});
+
 app.set("view engine", "hbs"); // key-val pair.
 
 app.use(express.static(__dirname + "/public"));
@@ -22,8 +31,10 @@ app.get("/", (req, res) => {
     */
     
     res.render("home.hbs", {
-        pageTitle: "Title of Homepage",
-        currentDate: new Date()
+        pageTitle: "Homepage",
+        // currentDate: new Date()
+        // currentYear: new Date().getFullYear()
+        msg: "Welcome!"
     });
 });
 
@@ -32,8 +43,9 @@ app.get("/about", (req, res) => {
     
     // res.render("about.hbs");
     res.render("about.hbs", {
-        pageTitle: "Dynamic title",
-        currentYear: new Date().getFullYear()
+        // pageTitle: "Dynamic title",
+        pageTitle: "About page"
+        // currentYear: new Date().getFullYear()
     });
 });
 
