@@ -14,6 +14,10 @@ npm i hbs@4.0.1 --save
 nodemon server.js -e js,hbs
 
 
+git --version
+git init
+ls -a
+git add package.json
 
 
 
