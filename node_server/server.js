@@ -4,6 +4,8 @@ const express = require("express");
 
 const hbs = require("hbs");
 
+const fs = require("fs");
+
 var app = express();
 
 hbs.registerPartials(__dirname + "/views/partials");
@@ -17,6 +19,29 @@ hbs.registerHelper("capitalize", (text) => {
 
 app.set("view engine", "hbs"); // key-val pair.
 
+// app.use(express.static(__dirname + "/public"));
+app.use((req, res, next) => {
+    var now = new Date().toString();
+    // console.log(`${now}, ${req.method} ${req.url}`);
+    var log = `${now}, ${req.method} ${req.url}`;
+    console.log(log);
+    
+    fs.appendFile("server.log", log + "\n", (err) => {
+        if (err) {
+            console.log("Unable to append to server.log.");
+        }
+    });
+    
+    next();
+});
+
+// Express middleware
+/*
+app.use((req, res, next) => {
+    res.render("maintenance.hbs");
+});
+// next() is not called here, so the code below won't be triggered.
+*/
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
