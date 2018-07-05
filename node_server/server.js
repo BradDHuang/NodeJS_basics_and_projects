@@ -6,6 +6,8 @@ const hbs = require("hbs");
 
 const fs = require("fs");
 
+const port = process.env.PORT || 8080;
+
 var app = express();
 
 hbs.registerPartials(__dirname + "/views/partials");
@@ -74,8 +76,12 @@ app.get("/about", (req, res) => {
     });
 });
 
-app.listen(8080, () => {
-  console.log("Express app listening on port 8080 with Cloud9!");
+// app.listen(8080, () => {
+
+app.listen(port, () => {
+    
+//   console.log("Express app listening on port 8080 with Cloud9!");
+  console.log(`Express app listening on port ${port} with Cloud9!`);
   //call this app from https://<workspace name>-<user name>.c9users.io
 });
 

@@ -25,6 +25,16 @@ eval "$(ssh-agent -s)"
 // Agent pid 5833
 
 
+heroku --help
+heroku login
+heroku keys:add
+heroku keys
+ssh -v git@heroku.com
+
+npm start // After "scripts" is added in package.json
+
+
+
 
 
 
