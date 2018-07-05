@@ -33,6 +33,9 @@ ssh -v git@heroku.com
 
 npm start // After "scripts" is added in package.json
 
+// heroku create
+// git push heroku
+https://github.com/BradDHuang/node_server_test_app
 
 
 
