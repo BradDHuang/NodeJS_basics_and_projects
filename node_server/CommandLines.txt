@@ -20,6 +20,9 @@ ls -a
 git add package.json
 
 
+ls -al ~/.ssh
+eval "$(ssh-agent -s)"
+// Agent pid 5833
 
 
 
