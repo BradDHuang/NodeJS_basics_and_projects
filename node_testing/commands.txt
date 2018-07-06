@@ -1,0 +1,15 @@
+
+
+npm init
+
+npm i mocha@3.0.0 --save-dev
+// as a development dependency
+
+npm test
+
+
+
+
+
+
+
