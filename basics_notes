@@ -47,6 +47,19 @@ debugging via Chrome dev tools:
 chrome://inspect
 
 
+https://stackoverflow.com/questions/14633968/chrome-firefox-console-log-always-appends-a-line-saying-undefined
+
+    If you're running console.log() from a JS file, 
+    this undefined line should not be appended.
+
+    If you're running console.log() from the console itself, it makes sense. 
+    This is why: In the console you can type a name of a variable (for example try typing window) 
+    and it prints info about it. 
+    When you run any void function (like console.log()) from the console, 
+    it also prints out info about the return value, undefined in this case.
+    
+
+
 
 
 
