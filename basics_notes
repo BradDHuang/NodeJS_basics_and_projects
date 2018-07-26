@@ -1,5 +1,6 @@
 
 Node.js: 
+(Async Execution for V8 JS)
 a JavaScript runtime 
 built on Chrome's V8 JavaScript engine. 
 // ******
@@ -8,9 +9,13 @@ built on Chrome's V8 JavaScript engine.
 // ******
 
 Node.js uses an event-driven, 
-non-blocking 
-I/O model 
+non-blocking (Async.) I/O model 
 that makes it lightweight and efficient. 
+
+Because of the event-driven architecture,
+memory footprint is low, throughput is high, 
+and the programming model is simpler. 
+
 // ******
 e.g. of "blocking"
 var user1 = getUserSync("123"); // waiting on user1.
@@ -30,6 +35,15 @@ getUser("321", function(user2) { // starting getUser for user2.
 Node.js' package ecosystem:
 npm (node package manager), 
 is the largest ecosystem of open source libraries in the world.
+
+
+More on WHAT IS NODE.JS
+• Server Side JS
+• Built on Google Chrome's V8
+• To provide an easy way to develop scalable network servers
+• An env. to develop high performance web services
+• Using event-driven, asyn. I/O to minimize overhead and maximize scalability.
+
 
 use "Ctrl + f" // find
 
@@ -58,6 +72,97 @@ https://stackoverflow.com/questions/14633968/chrome-firefox-console-log-always-a
     When you run any void function (like console.log()) from the console, 
     it also prints out info about the return value, undefined in this case.
     
+
+TYPES OF MODULES
+    1. Core Modules
+        • within node.js
+        • names are reserved
+        // Only need to load it into your module
+        e.g.
+        FILE SYSTEM (FS) – CORE MODULE
+        
+        HTTP (WEB) SERVER
+        
+    2. npm Modules
+        • From npmjs.org
+        • under /node_modules
+        e.g.
+        STATIC WEB SERVER – NPM MODULE
+        
+    3. File Modules
+        • user developed
+        • defined with module.exports
+        • typically at current directory
+        • has to give path to load
+
+
+MODULE SYSTEM
+• for packaging and namespacing code
+• to prevent name collisions
+• Use module.exports
+    • a value of any type
+    • on a whole code segment or individually
+    • actually exporting an object with properties
+• For your File Modules        
+        
+// module use
+const m1 = require('./1-node-module1.js');
+console.log(m1.geometricSum(1, 2, 5)); // 31
+/*
+// module definition
+module.exports = {
+    geometricSum(a, x, n) {
+      if(x === 1) return a*n;
+      return a*(1 - Math.pow(x, n))/(1 - x);
+    }
+}
+*/
+
+
+// fs e.g.
+
+    const fs = require('fs');
+    fs.writeFile('hello.txt', 'hello from Node!', function(err) {
+      if (err) {
+        console.log('Error writing to file.');
+      } else {
+        console.log('writing to file is successful.');
+      }
+    });
+    fs.readFile('hello.txt', { encoding: 'utf8' }, function(err, data) {
+      if (err) {
+        console.error('Error reading file.');
+      } else {
+        console.log(data);
+      }
+    });
+
+
+// http e.g.
+
+    const http = require('http');
+    const server = http.createServer(function(req, res) {
+      console.log(`${req.method} ${req.url}`);
+      res.end('Hello world! You entered ' + `${req.url}`);
+      // Hello world! You entered /
+    });
+    const port = 8080; // http://localhost:8080
+    server.listen(port, function() {
+      console.log(`server startd on port ${port}`);
+    });
+
+
+// static web server e.g.
+
+    const connect = require('connect');
+    const serveStatic = require('serve-static');
+    const app = connect();
+    app.use(serveStatic('static'));
+    console.log('I am alive...');
+    app.listen(8080); 
+
+
+
 
 
 
