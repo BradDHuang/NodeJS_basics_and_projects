@@ -37,9 +37,11 @@ const server = http.createServer((req, res) => {
             res.write(getData);
             
             res.write("<br>");
+            res.write("<div style='color: orange' class='result'>");
             for (let i = 0; i < num; i++) {
-                // res.write(` [ ${matrix[i]} ] <br>`);
+                res.write(` [ ${matrix[i]} ] <br>`);
             }
+            res.write("</div>");
             
             res.write("<br>");
             res.end(`This is a ${num}-D Spiral Matrix.`);
