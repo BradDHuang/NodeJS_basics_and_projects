@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+  	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Spiral Matrix</title>
+	<script type="text/javascript" src="spiralMatrix.js">
+		function outputSpiralMatrix() {
+			console.log("Testing...");
+			let num;
+			num = parseInt(document.inputForm.textbox.value);
+			let matrix = spiralMatrix(num);
+			alert(matrix);
+			// document.getElementById("result").innerHTML = spiralMatrix(num);
+			document.getElementById("result").innerHTML = matrix;
+			// let ele = document.getElementById("testing");
+		// ele.addEventListener("click", test);
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="inputForm">
+		Please enter dimension: <input type="text" name="textbox" />
+		<!-- <input type="button" value="Submit" onclick="outputSpiralMatrix()" /> -->
+		<button onclick="outputSpiralMatrix()">Submit</button>
+		<br>
+	</form>
+	<div id="result">
+	</div>
+</body>
+</html>
