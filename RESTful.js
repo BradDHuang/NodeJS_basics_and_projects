@@ -1,0 +1,44 @@
+
+
+/*
+REST / RESTFUL
+• REST (REpresentational State Transfer)
+
+• One of the modern architectural style of web applications
+• REST is a set of design criteria
+    • not the physical structure (architecture) of the system
+• REST is not tied to the ‘Web’ only
+    • i.e. doesn’t depend on the mechanics of HTTP
+• It is supposed to be ‘stateless’
+*/
+
+TERMS
+• Resource
+    Similar to “Object” in OOP
+    
+• URI
+    A resource must have at least one URI
+    No URI -> Not a resource
+    
+• Flexible data representation
+
+• Uniform interface - CRUD
+
+
+Notes:
+    Sessions are NOT RESTful (i.e. sessions = state)
+    Cookies, if used appropriately (for storing client state) are RESTful
+    Some server frameworks only support GET/POST forcing one to overload POST requests for PUT/DELETE
+    Prefix endpoints with /api, to differentiate from app routes.
+    
+
+
+
+
+
+
+
+
+
+
+
