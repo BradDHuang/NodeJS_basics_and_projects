@@ -15,7 +15,9 @@ mongoose.connect("mongodb://testuser:testuser1@ds119598.mlab.com:19598/hwoneuser
 
 // const userServer = http.createServer((req, res) => {
 	// if (req.method === "GET" && req.url === "/app/users/getall") {
-	app.get("/app/users/getall", (req, res) => {
+	// app.get("/app/users/getall", (req, res) => {
+	// Change it into RESTful API routing
+	app.get("/api/users", (req, res) => {
 		// get all
 		User.find((err, users) => {
 			if (err) {
@@ -34,7 +36,8 @@ mongoose.connect("mongodb://testuser:testuser1@ds119598.mlab.com:19598/hwoneuser
 	});
 		
 	// } else if (req.method === "GET" && req.url === "/app/users/getone/:id") {
-	app.get("/app/users/getone/:id", (req, res) => {
+	// app.get("/app/users/getone/:id", (req, res) => {
+	app.get("/api/users/:id", (req, res) => {
 		// get one by id
 		// let id = 2;
 		// let id = "5b5cfa57d56c6c1de0b73caa"; // _id
@@ -57,7 +60,8 @@ mongoose.connect("mongodb://testuser:testuser1@ds119598.mlab.com:19598/hwoneuser
 	});
 
 	// } else if (req.method === "POST" && req.url === "/app/users/insertone") {
-	app.post("/app/users/insertone", (req, res) => {
+	// app.post("/app/users/insertone", (req, res) => {
+	app.post("/api/users", (req, res) => {
 		// create a new instance, insert one.
 		let userone = new User();
 		// console.log(req.body);
@@ -86,7 +90,8 @@ mongoose.connect("mongodb://testuser:testuser1@ds119598.mlab.com:19598/hwoneuser
 	});
 
 	// } else if (req.method === "DELETE" && req.url === "/app/users/deleteone/:id") {
-	app.delete("/app/users/deleteone/:id", (req, res) => {
+	// app.delete("/app/users/deleteone/:id", (req, res) => {
+	app.delete("/api/users/:id", (req, res) => {
 		// get all
 		User.find((err, users) => {
 			if (err) {
