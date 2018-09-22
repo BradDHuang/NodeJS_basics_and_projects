@@ -55,20 +55,22 @@ MIDDLEWARE
     
 ROUTING
 
-• routes : destinations of the HTTP request URIs
+• routes : destinations 
+  of the HTTP request URIs
 
-• How you tell your app "for this URI, execute this piece of JavaScript code" - called a route handler.
+• How you tell your app "for this URI, execute this piece of JavaScript code" - called a Route Handler.
 
 • Route Handler
     • responds to an HTTP request,
     • Or pass it on to another handler function if it does not
-• Two approaches
+• 2 approaches
     • Basic
         e.g.
         app.HTTP_METHOD(PATH, ROUTER_HANDLER);
     • Router Object
         e.g.
-        const router = express.Router(); // A system middleware
+        const router = express.Router(); 
+        // A system middleware
         router.use();
         
         // Use a defined router
