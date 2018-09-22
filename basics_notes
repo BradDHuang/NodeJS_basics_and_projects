@@ -38,15 +38,16 @@ getUser("321", function(user2) { // starting getUser for user2.
 // ******
 
 Node.js' package ecosystem:
-npm (node package manager), 
+npm ( node package manager ), 
 is the largest ecosystem of open source libraries in the world.
 
 
-More on WHAT IS NODE.JS
+More on 
+WHAT IS NODE.JS
 • Server Side JS
 • Built on Google Chrome's V8
-• To provide an easy way to develop scalable network servers
-• An env. to develop high performance web services
+• To provide an easy way to develop Scalable network servers
+• An env. to develop High performance web services
 • Using event-driven, asyn. I/O to minimize overhead and maximize scalability.
 
 
@@ -74,14 +75,19 @@ https://stackoverflow.com/questions/14633968/chrome-firefox-console-log-always-a
     If you're running console.log() from the console itself, it makes sense. 
     This is why: In the console you can type a name of a variable (for example try typing window) 
     and it prints info about it. 
-    When you run any void function (like console.log()) from the console, 
-    it also prints out info about the return value, undefined in this case.
+    When you run 
+    any void function (like console.log()) from the console, 
+    it also prints out info about 
+    the return value, 
+    // undefined in this case.
     
 
-TYPES OF MODULES
+3 TYPES OF MODULES
     1. Core Modules
+    
         • within node.js
-        • names are reserved
+        
+        • ***names are reserved***
         // Only need to load it into your module
         e.g.
         FILE SYSTEM (FS) – CORE MODULE
@@ -89,14 +95,18 @@ TYPES OF MODULES
         HTTP (WEB) SERVER
         
     2. npm Modules
+    
         • From npmjs.org
-        • under /node_modules
+        
+        • ***under /node_modules***
         e.g.
         STATIC WEB SERVER – NPM MODULE
         
     3. File Modules
+    
         • user developed
-        • defined with module.exports
+        
+        • ***defined with module.exports***
         • typically at current directory
         • has to give path to load
 
