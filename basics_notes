@@ -10,8 +10,9 @@ built on Chrome's V8 JavaScript engine.
 // V8 Written in: C++, JavaScript
 // ******
 
-Node.js uses an event-driven, 
-non-blocking (Async.) I/O model 
+Node.js uses an 
+(1) event-driven, 
+(2) non-blocking (Async.) I/O model 
 that makes it lightweight and efficient. 
 
 Because of the event-driven architecture,
@@ -20,12 +21,14 @@ and the programming model is simpler.
 
 // ******
 e.g. of "blocking"
+
 var user1 = getUserSync("123"); // waiting on user1.
 console.log("user1", user1);
 var user2 = getUserSync("321"); // waiting on user2.
 console.log("user2", user2);
 
 e.g. of "non-blocking"
+
 getUser("123", function(user1) { // starting getUser for user1.
     console.log("user1", user1);
 }); 
