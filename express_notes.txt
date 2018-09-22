@@ -30,17 +30,23 @@ RESPONSE OBJECT
     // Created along with the request object.
     
 MIDDLEWARE
-• A JavaScript function that is plugged in the middle of processing flow
-• Can manipulate Request and Response objects
-• Can perform an isolated action
-• Can terminate the request flow by returning a response to the client
-• Can pass on the control to the next middleware.
 
-• Loaded in an Express app using the app.use() method.
+• A JavaScript function 
+  that is plugged in the middle of processing flow
+• (1) Can manipulate Request and Response objects
+• (2) Can perform an isolated action
+• (3) Can terminate the request flow 
+      by returning a response to the client
+• (4) Can pass on the control 
+      to the next middleware.
+
+• Loaded in an Express app 
+  using the app.use() method.
 • Parameters
     • req - Request object
     • res - Response object,
     • next - a reference to the next middleware in line
+    
     e.g.
     app.use(function(req, res, next) {
         console.log('Request from: ' + req.ip);
