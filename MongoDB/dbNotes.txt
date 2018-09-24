@@ -1,0 +1,62 @@
+
+// Notes about MongoDB & MySQL.
+
+MySQL (Relational database management system (RDBMS))
+• Relational Data Model
+    • Object / Table
+    • Relationships
+        • 1:1, 1:M, M:M
+• Storage
+    • Binary
+• Operations
+    • CRUD
+• Access
+    • GUI (graphical user interface)
+    • ODBC (Open Database Connectivity ), JDBC (Java Database Connectivity), …
+    
+MongoDB
+• Document Data Model
+    • JSON, BSON (Binary JSON)
+    // Collection
+• Storage
+    • Text files
+• Operations
+    • Search / Read
+    • CRUD
+• Access
+    • same …
+   
+ACCESSING DATABASE  
+DML 
+stands for Data Manipulation Language. 
+The SQL statements that are in the DML class are INSERT, UPDATE and DELETE. ... 
+
+Data Definition Languages (DDL) 
+are used to define the database structure. 
+Any CREATE, DROP and ALTER commands are examples of DDL SQL statements.
+
+Query
+
+An ORM (Object-relational mapping)
+maps between an Object Model and a Relational Database. 
+// MySQL is not an ORM, it's a Relational Database, more specifically, a SQL Database.
+
+An ODM (Object Document Mapper)
+maps between an Object Model and a Document Database. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
