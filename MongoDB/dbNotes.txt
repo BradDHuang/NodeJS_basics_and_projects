@@ -45,6 +45,41 @@ An ODM (Object Document Mapper)
 maps between an Object Model and a Document Database. 
 
 
+why MongoDB?
+
+because it enables Organizations to build applications 
+faster, 
+handle highly diverse data types, 
+and manage applications more efficiently at scale.
+
+Development is simplified 
+as MongoDB documents map naturally to 
+modern, object-oriented programming (OOP) languages. 
+
+Using MongoDB 
+removes the complex object-relational mapping (ORM) layer 
+that translates objects in code to relational tables. 
+
+MongoDB can also be scaled 
+within and across multiple distributed data centers, 
+providing new levels of availability and scalability 
+previously unachievable with relational databases like MySQL. 
+// scale with MySQL often requires significant, custom engineering work.
+
+Working with data as flexible JSON documents, 
+rather than as rigid rows and columns, 
+is proven to help developers move faster.
+
+Documents are natural. 
+// Documents represent data in the same way that applications do. 
+Documents are flexible. 
+// Each document can store data with 
+// different attributes from other documents.
+Documents make applications fast. 
+// With data for an entity stored in a single document, 
+// rather than spread across multiple relational tables, 
+// the database only needs to read and write to 
+// a single place.
 
 
 
