@@ -1,11 +1,13 @@
 
 Node.js: 
-(Async Execution for V8 JS)
+(Async 
+Execution for V8 JS)
 a JavaScript runtime 
 built on Chrome's V8 JavaScript engine. 
 // ******
 
-// V8 compiles JavaScript directly to native machine code before executing it.
+// V8 
+// compiles JavaScript directly to native machine code before executing it.
 
 // V8 Written in: C++, JavaScript
 // ******
