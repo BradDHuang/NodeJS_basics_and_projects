@@ -4,14 +4,29 @@ WHAT IS EXPRESS.JS
 • A minimal yet flexible and powerful web development framework for node.js
 
 • (1) Minimal
+
     • Doesn’t come with all sorts of functionality,
     • Supports only the very basic features, not all of them are enabled by default
     
 • (2) Flexible and Powerful
+
     • Uses its own ‘middleware’
     • Use of any nodejs modules
     • Complete access to node API
 */
+
+WHAT DOES IT DO
+    • Basic App Object
+    • HTTP Requests: Parses arguments and headers
+    • HTTP Responses
+    • Routing
+    • Components, so called Middleware
+    • Server-Side Templating: Views / HTML Templates
+        • Partials
+        • Layouts
+    • Configuration
+    • Recipe to create a web application
+
 /*
 
 APPLICATION OBJECT
