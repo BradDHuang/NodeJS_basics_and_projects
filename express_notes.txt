@@ -104,7 +104,52 @@ ROUTING
         app.use(PARTIAL_PATH, ROUTER_MODULE)
 */
 
+
+res.json() vs res.send() vs res.end() 
+
+res.send()
+The signature of this method looks like this: 
+    res.send([body]) 
+where the body can be any of the following: 
+    Buffer, String, an Object and an Array.
     
+// This method automatically sets the Content-Type response header as well 
+// based on the argument passed to the send() method.
+
+// e.g. res.set('Content-Type', 'text/html');
+
+res.json() 
+actually has some functionality that is related to JSON objects 
+that we can't access when using res.send(). 
+// res.json() allows for extra formatting of the JSON data.
+Namely, it can format the returned JSON data by applying 2 options:
+    app.set('json replacer', replacer); // property transformation rules
+        // replacer: A function that alters the behavior of the stringification process
+    app.set('json spaces', 2); // number of spaces for indentation
+These 2 options are collected and passed to the JSON.stringify() method: 
+since its signature loos like this: 
+    JSON.stringify(object, replacer, space ). 
+// Once this method is called, the res.json() method will then call res.send() as well under the hood.
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
+res.end() 
+if we want to end the response without providing any data. 
+// This could be useful for a 404 page:
+// e.g. res.status(404).end();
+
+res.send() (and remember, res.json()) 
+both allow us to send some data and they also 
+end the response, 
+so there's no need to explicitly call res.end().
+
+
+res.status(code)
+    Sets the HTTP status for the response. 
+    It is a chainable alias of Node’s 
+response.statusCode.
+// e.g. response.statusCode = 404;
+
 
 
 
