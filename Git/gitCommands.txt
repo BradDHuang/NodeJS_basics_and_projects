@@ -1,6 +1,7 @@
 
 // git commands review
 
+https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
 
 git --version
 // git version 2.14.1
@@ -23,7 +24,11 @@ git branch
 // List all branches
 
 git checkout -b branch_name
-// Create the branch on your local machine and switch in this branch.
+// Create a new branch on your local machine 
+// and switch to this branch.
+
+git checkout branch_name
+// Switch from one branch to another
 
 git push origin branch_name
 // Push the branch to remote
@@ -41,6 +46,62 @@ Squash last n commits into one commit:
 
 git rebase master 
 // rebase the current branch onto master
+
+What is git rebase?
+Rebasing is the process of 
+moving or combining a sequence of commits 
+to a new base commit. 
+// Rebasing is most useful and 
+// easily visualized 
+// in the context of a feature branching workflow. 
+
+From a content perspective, 
+rebasing is changing the base of your branch 
+from one commit to another 
+making it appear as if you'd created your branch from a different commit. 
+Internally, 
+Git accomplishes this 
+by creating new commits 
+and applying them to the specified base. 
+It's very important to understand that even though the branch looks the same, 
+it's composed of entirely new commits.
+
+Usage
+The primary reason for rebasing is to 
+maintain a linear project history. 
+
+You have 2 options for integrating your feature into the master branch: 
+    (1) merging directly; // results in a 3-way merge and a merge commit.  
+    (2) rebasing and then merging. // results in a fast-forward merge and a perfectly linear history. 
+    
+never rebase commits 
+once they've been pushed to 
+a public repository. 
+The rebase would replace the old commits with new ones 
+and it would look like that part of your project history abruptly vanished.
+
+
+Fetch and merge changes on the remote server to your working directory:	
+git pull
+
+
+To merge a different branch into your active branch:	
+git merge branch_name
+
+Git merge will combine multiple sequences of commits 
+into one unified history. 
+// In the most frequent use cases, git merge is used to combine two branches. 
+
+Git uses 3 commits to generate the merge commit: 
+    the 2 branch tips and their common ancestor.
+    
+// If your feature branch was actually small, 
+// you would probably be better off 
+// rebasing it onto master and doing a fast-forward merge. 
+
+
+Preview changes, before merging:
+git diff <sourcebranch> <targetbranch>
 
 
 
