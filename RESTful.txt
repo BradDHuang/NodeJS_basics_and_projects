@@ -31,6 +31,10 @@ Notes:
     Some server frameworks only support GET/POST forcing one to overload POST requests for PUT/DELETE
     Prefix endpoints with /api, to differentiate from app routes.
     
+REST: a mapping between HTTP routes and CRUD.
+
+REST API:
+    Web services APIs that adhere to the REST architectural constraints are called REST(ful) APIs.
 
 
 
