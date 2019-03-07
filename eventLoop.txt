@@ -1,0 +1,9 @@
+
+The main event loop is 
+single-threaded 
+but most of the I/O works run on 
+separate threads, 
+because the I/O APIs in Node.js are 
+asynchronous/non-blocking 
+by design, in order to accommodate the event loop.
+
