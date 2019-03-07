@@ -7,6 +7,19 @@ const express = require('express')
 
 const app = express()
 
+// middleware:
+const noVisitorDay = function(day) {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return (req, res, next) => {
+        var today = new Date().getDay(); // index
+        if (days[today] === day) {
+            res.send(`No visitors on ${day}s, thanks.`);
+        }
+        next();
+    }
+}
+app.use(noVisitorDay('Tuesday'))
+
 const publicDirPath = path.join(__dirname, '../public')
 app.use(express.static(publicDirPath))
 
